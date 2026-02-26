@@ -1,0 +1,77 @@
+{
+  "monitoring": {
+    "interval_seconds": 60,
+    "confidence_thresholds": {
+      "BTC": 90,
+      "ETH": 85,
+      "SOL": 80
+    },
+    "markets": {
+      "BTC": {
+        "entry": 69000,
+        "sl": 68000,
+        "tp1": 70500,
+        "tp2": 72000,
+        "direction": "UP",
+        "position": "LONG"
+      },
+      "ETH": {
+        "entry": 2320,
+        "sl": 2290,
+        "tp1": 2370,
+        "tp2": 2420,
+        "direction": "UP",
+        "position": "LONG"
+      },
+      "SOL": {
+        "entry": 128,
+        "sl": 132,
+        "tp1": 125,
+        "tp2": 122,
+        "direction": "DOWN",
+        "position": "SHORT"
+      }
+    },
+    "confidence_scores": {
+      "BTC": 65.7,
+      "ETH": 52.3,
+      "SOL": 38.7
+    },
+    "current_prices": {
+      "BTC": 68358,
+      "ETH": 2300,
+      "SOL": 130
+    }
+  },
+  "alerts": {
+    "enabled": true,
+    "telegram": {
+      "enabled": true,
+      "bot_token": "YOUR_BOT_TOKEN",
+      "chat_id": "YOUR_CHAT_ID"
+    },
+    "email": {
+      "enabled": false,
+      "recipient": ""
+    }
+  },
+  "news_monitoring": {
+    "enabled": true,
+    "keywords": [
+      "Fed",
+      "CPI",
+      "NFP",
+      "ETF",
+      "regulation",
+      "hack",
+      "halving",
+      "options expiry"
+    ],
+    "impact_threshold": "High"
+  },
+  "logging": {
+    "enabled": true,
+    "file": "monitoring.log",
+    "level": "INFO"
+  }
+}
